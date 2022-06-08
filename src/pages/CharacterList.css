@@ -1,0 +1,19 @@
+.CharacterList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.img{
+    width: 400px;
+    height: 400px;
+}
+
+.main-div{
+    margin-top: 50px;
+}
+
+.spinner{
+    display: block;
+    margin: auto;
+}
