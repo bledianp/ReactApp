@@ -24,27 +24,27 @@ export default function CharactersList() {
 
   return (
     <div className="CharacterList">
-      {data.launchesPast.map((character) => {
-        console.log(character.mission_name);
-        console.log(character.ships.length);
-        console.log(character.links.video_link);
-        // console.log(character.ships[0].image);
+      {data.launchesPast.map((item) => {
+        // console.log(item.mission_name);
+        // console.log(item.ships.length);
+        // console.log(item.links.video_link);
+
         return (
-          <div className="main-div" key={character.id}>
-            <Link to={`/${character.id}`} target="_blank">
+          <div className="main-div" key={item.id}>
+            <Link className="link"to={`/${item.id}`} target="_blank">
               <img
                 className="img"
                 src={
-                  character.ships.length > 0
-                    ? character.ships[0].image
+                  item.ships.length > 0
+                    ? item.ships[0].image
                     : "https://i.imgur.com/28dCx6G.jpg"
                 }
               />
 
-              <h2>{character.mission_name}</h2>
+              <h2>{item.mission_name}</h2>
             </Link>
 
-            <p>{character.launch_date_local}</p>
+            <p>{item.launch_date_local}</p>
           </div>
         );
       })}

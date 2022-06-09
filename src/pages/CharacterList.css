@@ -17,3 +17,8 @@
     display: block;
     margin: auto;
 }
+
+.link{
+    text-decoration: none;
+    color: black;
+}
