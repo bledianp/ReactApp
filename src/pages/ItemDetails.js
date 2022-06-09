@@ -1,9 +1,8 @@
 import React from "react";
 import { useCharacters } from "../hooks/useCharacters";
 import "./CharacterList.css";
-import { Link } from "react-router-dom";
 
-export default function CharactersList() {
+export default function ItemDetails() {
   const { error, loading, data } = useCharacters();
   console.log(data);
 
@@ -31,18 +30,16 @@ export default function CharactersList() {
         // console.log(character.ships[0].image);
         return (
           <div className="main-div" key={character.id}>
-            <Link to={`/${character.id}`} target="_blank">
-              <img
-                className="img"
-                src={
-                  character.ships.length > 0
-                    ? character.ships[0].image
-                    : "https://i.imgur.com/28dCx6G.jpg"
-                }
-              />
+            <img
+              className="img"
+              src={
+                character.ships.length > 0
+                  ? character.ships[0].image
+                  : "https://i.imgur.com/28dCx6G.jpg"
+              }
+            />
 
-              <h2>{character.mission_name}</h2>
-            </Link>
+            <h2>{character.mission_name}</h2>
 
             <p>{character.launch_date_local}</p>
           </div>
