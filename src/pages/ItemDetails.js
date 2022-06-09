@@ -1,9 +1,9 @@
 import React from "react";
-import { useCharacters } from "../hooks/useCharacters";
+import {useItemDetails} from "../hooks/useItemDetails";
 import "./CharacterList.css";
 
 export default function ItemDetails() {
-  const { error, loading, data } = useCharacters();
+  const { error, loading, data } = useItemDetails();
   console.log(data);
 
   if (loading)
